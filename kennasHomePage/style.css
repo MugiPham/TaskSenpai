@@ -1,0 +1,18 @@
+.navbar{
+    background-color:#3A4142;
+    overflow: hidden;
+}
+
+.navbar a{
+    float: left;
+    color: #55BFE0;
+    text-align: center;
+    padding: 14px 14px;
+    font-size: 17px;
+    border-right: 1px solid #657275;
+    }
+
+.navbar a.active{
+    background-color: #4BAAC7;
+    color: #3A4142;
+}
