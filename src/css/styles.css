@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 .navbar {
 	background-color: #3a4142;
 	display: flex;
@@ -25,7 +27,7 @@
 }
 
 .base {
-	background-color: wheat;
+	background-color: rgb(215, 215, 215);
 	padding: auto;
 	display: flex;
 	align-items: center;
@@ -49,11 +51,9 @@
 	font-size: 5em;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 body,
 html {
-	background-color: #c6d7b1;
+	background-color: #25e0ea;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -68,25 +68,28 @@ html {
 	text-align: center;
 	border-radius: 10px 10px 0 0;
 	margin-top: 50px;
-	color: #eaedc2;
+	color: #25e0ea;
 	text-shadow: 1px 1px 3px #000;
-	background-color: #828b6c;
+	background-color: #3a4142;
+	border-bottom: 1px solid #657275;
+	
 }
 .main {
-	background-color: #f5f5f5;
-	color: #828b6c;
+	background-color: #3a4142;
+	color: #25e0ea;
 	padding: 1px 5px 10px 10px;
 }
 
 button {
-	background: none;
+	background: #55bfe0;
 	border: 0px;
-	color: #888;
+	color: #3a4142;
 	font-size: 15px;
 	width: 60px;
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
+	margin-right: .5em;
 }
 
 ul {
@@ -103,12 +106,17 @@ ul {
 }
 
 #createtask {
-	background-color: #828b6c;
+	background-color: #4baac7;
 	padding: 5px;
 	width: 231px;
-	color: #eaedc2;
+	color: #3a4142;
 	text-align: center;
 	cursor: pointer;
+	margin-top: 1em;
+}
+
+#createtask:hover {
+	color: #1900ff;
 }
 
 li * {
@@ -159,7 +167,7 @@ input#new-task {
 	width: 318px;
 }
 p > button:hover {
-	color: #0fc57c;
+	color: #1900ff;
 }
 
 li {
@@ -182,7 +190,7 @@ li > input[type="text"] {
 	width: 226px;
 }
 li > .delete:hover {
-	color: #cf2323;
+	color: #ff0000;
 }
 
 /* Completed */
@@ -202,4 +210,8 @@ ul li.editMode input[type="text"] {
 
 ul li.editMode label {
 	display: none;
+}
+
+li > .edit:hover {
+	color: #1900ff;
 }
