@@ -37,6 +37,7 @@ var createNewTaskItem = function(taskString) {
   return listItem;
 }
 
+
 var addTask = function() {
   textvalue = document.getElementById('tasktext').value;
   listTask.push(textvalue);
