@@ -63,12 +63,12 @@
 
 body,
 html {
-	background-color: #25e0ea;
+	background-color: grey;
 	font-family: "Open Sans", sans-serif;
 }
 
 .wrapper {
-	width: 70%;
+	width: 25%;
 	margin: 5px;
 	margin-bottom: 20px;
 }
