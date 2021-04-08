@@ -10,6 +10,16 @@
 	margin-top: 0;
 	margin-bottom: 1em;
 }
+.selectionTab {
+	background-color: #3a4142;
+	display: flex;
+	overflow: hidden;
+	justify-content: flex-start;
+	align-items: center;
+	display: flex;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
 
 .navbar a {
 	float: left;
@@ -35,7 +45,7 @@
 	flex-direction: column;
 }
 
-.currentIndexNav {
+.currentTasksNav {
 	background-color: beige;
 	display: flex;
 	padding: 1em;
@@ -45,7 +55,7 @@
 	border-radius: 25px;
 }
 
-.currentIndexNav a {
+.currentTasksNav a {
 	align-items: center;
 	font-style: normal;
 	font-size: 5em;
@@ -53,27 +63,14 @@
 
 body,
 html {
-	background-color: #888;
+	background-color: #25e0ea;
 	font-family: "Open Sans", sans-serif;
 }
 
 .wrapper {
-	width: 325px;
-	margin: 20px;
+	width: 70%;
+	margin: 5px;
 	margin-bottom: 20px;
-	overflow: auto;
-}
-#taskCard{
-	float: left
-}
-#agendaCard{
-	float: left;
-}
-#projCard{
-	float: left;
-}
-#noteCard{
-	float: left;
 }
 
 .box {
@@ -84,9 +81,21 @@ html {
 	color: #25e0ea;
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
-	border-bottom: 1px solid #657275;
+	border-bottom: 5px solid white;
 	
 }
+.box1 {
+	padding: 1px 0 1px 0;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	margin-top: 50px;
+	color: #25e0ea;
+	text-shadow: 1px 1px 3px #000;
+	background-color: #3a4142;
+	border-bottom: 5px solid white;
+	
+}
+
 .main {
 	background-color: #3a4142;
 	color: #25e0ea;
@@ -110,15 +119,15 @@ ul {
 	padding: 0;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-#createItem {
+#createtask {
 	background-color: #4baac7;
 	padding: 5px;
 	width: 231px;
@@ -128,7 +137,7 @@ ul {
 	margin-top: 1em;
 }
 
-#createItem:hover {
+#createtask:hover {
 	color: #1900ff;
 }
 
