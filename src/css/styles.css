@@ -72,6 +72,17 @@ html {
 	text-shadow: 1px 1px 3px #000;
 	background-color: #828b6c;
 }
+.box1 {
+	padding: 1px 0 1px 0;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	margin-top: 50px;
+	color: #25e0ea;
+	text-shadow: 1px 1px 3px #000;
+	background-color: #3a4142;
+	border-bottom: 5px solid white;
+	
+}
 .main {
 	background-color: #f5f5f5;
 	color: #828b6c;
