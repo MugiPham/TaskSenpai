@@ -31,7 +31,63 @@
         <h2>Add Note</h2>
           <hr>
         </div>
-        
+
+        <!-- <form action="/action_page.php">
+          <label for="TNote">Title:</label><br>
+          <input type="text" id="TNote" title="TNote" value="Title"><br>
+          <label for="BNote">Body:</label><br>
+          <input type="text" id="BNote" name="BNote" value="Body"><br><br>
+          <input type="submit" value="submit">
+        </form>
+
+        <form name="myForm" id="myForm" onsubmit="return validateForm()">
+          Pets: <br />
+          <input type="text" id="pets" />
+          <input type="button" id="addPet" value="Add Pet" />
+          <br/>
+      </form> -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+
+      <body>  
+        <div class="info">
+          <label for="Title">Enter Note
+          </label>
+          <label for="Body">Enter Note
+          </label>
+          <input id="Title" type="text"
+                 name="TNote" size="20">
+          <input id="Body" type="text"
+                 name="BNote" size="20">
+          <input id="submit" type="submit"  
+                 value="Submit"> 
+      </div>
+        <p id="para">      
+        </p>
+        <p id="para">      
+        </p>
+      </body>
+      <script>
+        window.onclick = function(e)
+        {   var id =  e.target.id;   
+         if (id === 'submit')  
+         { var txt = document.getElementById('Title').value    
+           $( "#para" ).empty().append( txt );
+         }
+        }
+      </script>
+      <script>
+        window.onclick = function(e)
+        {   var id =  e.target.id;   
+         if (id === 'submit')  
+         { var txt = document.getElementById('Body').value    
+           $( "#para" ).empty().append( txt );
+         }
+        }
+      </script>
+      
+
         <input type="text" id="tasktext" name="tasktext" placeholder="Title">
     
               <input type="text" id="tasktext" name="tasktext" placeholder="Body">
