@@ -27,7 +27,7 @@
 }
 
 .base {
-	background-color: rgb(215, 215, 215);
+	background-color: #d7d7d7;
 	padding: auto;
 	display: flex;
 	align-items: center;
@@ -36,7 +36,7 @@
 }
 
 .currentIndexNav {
-	background-color: beige;
+	background-color: #f5f5dc;
 	display: flex;
 	padding: 1em;
 	align-items: center;
@@ -57,6 +57,19 @@ html {
 	font-family: "Open Sans", sans-serif;
 }
 
+#greeting{
+	padding: 5px,3px;
+	font-size: 31px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#datetime{
+	padding: 5px,3px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 .wrapper {
 	width: 325px;
 	margin: 20px;
@@ -64,24 +77,28 @@ html {
 	overflow: auto;
 }
 #taskCard{
-	float: left
+	float: left;
+	color: #ea25e0;
 }
 #agendaCard{
 	float: left;
+	color: #eaa525;
 }
 #projCard{
 	float: left;
+	color: #19d312;
 }
 #noteCard{
 	float: left;
+	color: #ad60ec;
 }
 
 .box {
 	padding: 1px 0 1px 0;
 	text-align: center;
 	border-radius: 10px 10px 0 0;
-	margin-top: 50px;
-	color: #25e0ea;
+	margin-top: 5px;
+	
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
 	border-bottom: 1px solid #657275;
@@ -89,7 +106,7 @@ html {
 }
 .main {
 	background-color: #3a4142;
-	color: #25e0ea;
+	color: ##bfbfbf;
 	padding: 1px 5px 10px 10px;
 }
 
