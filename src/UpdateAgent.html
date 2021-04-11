@@ -7,7 +7,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>UpdateAgenda</title>
-        <script src=""></script>
+        <script src="scripts/scripts.js"></script>
+        <style>
+            .collapsible {
+              background-color: #777;
+              color: white;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+              background-color: #555;
+            }
+            
+            .content {
+              padding: 0 18px;
+              display: none;
+              overflow: hidden;
+              background-color: #f1f1f1;
+            }
+        </style>
     </head>
 
 <!--Agenda Title in nav bar-->
@@ -29,10 +53,10 @@
         <!--Current agenda-->
             <div class ="main">
                 <label>Name: </label>
-                    <input type = "name" name = "Go shopping">
+                    <input type = "name" name = "Go shopping" placeholder="Front-End Development">
                 <hr>
                 <label>Summary: </label>
-                    <textarea name="summary"></textarea>
+                    <textarea name="summary" placeholder="Work on the front-end design of website."></textarea>
                 <hr>
                     <label>Start Date: </label>
                         <input type="date" name="start">
@@ -43,29 +67,68 @@
     
                 <input type="submit" name="submit" value="Save">
             </form>
+        </div>
+        <div>
+            <!--All Projects-->
+            <div class = "box">
+                <ul>
+                    <h1>Full Agenda</h1>
+                    <button type="button" class="collapsible">+</button>
+                    <div class="content">
+                    <ul>
+                        <li>
+                            <a href="example" title="example.com">Work on Paper</a>
+                        </li>
+                        <p>Start: 2/19/21</p>
+                        <p>End: 4/9/21</p>
+    
+                        <li>
+                            <a href="example" title="example.com">Work on Project</a>
+                        </li>
+                        <p>Start: 4/10/21</p>
+                        <p>End: 5/9/21</p>
+    
+                        <li>
+                            <a href="example" title="example.com">Work on Java Program</a>
+                        </li>
+                        <p>Start: 5/10/21</p>
+                        <p>End: 6/9/21</p> 
+                    </div>
+                </ul>
             </div>
-    
-        <div class = "box1">
-            <h1>
-                <a href="pastProjects.html">Past Projects</a>
-            </h1>
-         </div>
-        <!--Past Projects-->
-        <div class = "box1">
-            <h1>
-                <a href="AllProjects.html">All Projects</a>
-            </h1>
+        
+            <!--Archive Section-->
+            <div class = "box">
+                <ul>
+                    <h1>Archive</h1>
+                        <button type="button" class="collapsible">+</button>
+                        <div class="content">
+                            <ul>
+                                <li>old stuff</li>
+                                <li>End: 2/2/2020</li>
+                            </ul>
+                        </div>
+                </li>
+                </ul>
+            </div>
         </div>
-        <!--Update Agenda-->
-        <div class = "box1">
-            <h1>
-                <a href="Archive.html">Archive</a>
-            </h1>
-        </div>
-        <!--Archive Section-->
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
             
-        </div>
-    
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
     
     </body>
 </html>
