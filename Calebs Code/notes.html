@@ -28,8 +28,8 @@
     
       <div class="main">
         <div class="addNote">
-        <h2>Add Note</h2>
-          <hr>
+        <!-- <h2>Add Note</h2> -->
+          <!-- <hr> -->
         </div>
 
         <!-- <form action="/action_page.php">
@@ -47,11 +47,11 @@
           <br/>
       </form> -->
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-      </script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script> -->
 
       <body>  
-        <div class="info">
+        <!-- <div class="info">
           <label for="Title">Enter Note
           </label>
           <label for="Body">Enter Note
@@ -66,9 +66,41 @@
         <p id="para">      
         </p>
         <p id="para">      
-        </p>
+        </p> -->
+
+        <div class="add-note">
+          <a href="#myModal" class="add-note">Add Note</a>
+        </div>
+        
+        <div id="myModal" class="Modal">
+          <div class="modal-content">
+            <h1 class="header">
+              Add Note
+            </h1>
+            <form class="note-form" action="">
+              <label for="">Title</label></br>
+              <input type="text" class="title"></br>
+              <label for="">Note</label></br>
+              <input class="note" type="text"></br>
+              <input type="submit">
+              <div class="cancel">
+                <a href="#close" class="cancel-btn">Cancel</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <table class="note-table">
+          <tr>
+            <td class="header">Title</td>
+            <td class="header">Note</td>
+          </tr>
+        </table>
+
+
+        <script src="notes.js"></script>
       </body>
-      <script>
+      <!-- <script>
         window.onclick = function(e)
         {   var id =  e.target.id;   
          if (id === 'submit')  
@@ -112,11 +144,11 @@
                   <li><label>OldNote</label><input type="text">
                   <label>BodyOfOldNote</label> </li>
                 </ul>
-            </div>
+            </div> -->
         
-      </div>
+      <!-- </div>
       
-    </div>
+    </div> -->
 
 <!--
     <div class="base">
