@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Tasks</title>
     <script src="scripts/scripts.js"></script>
+
 </head>
 
 
@@ -32,17 +33,19 @@
           <hr>
         </div>
         
-        <input type="text" id="tasktext" name="tasktext" placeholder="E.g: Do Chores">
-    
-              <div id="createtask" class="addtasks()" onClick="createNewTaskItem">
+        <!--<input type="text" id="tasktext" name="tasktext" placeholder="E.g: Do Chores"> -->
+           
+              <button class="createtaskbtn" onClick="addTask()"> + Create Task</button>
+
+              <!--<div id="createtask"  onClick="addTask">
                 + Create Task
-              </div>
+              </div> -->
         
             <div class="addedtasks">
                 <h2>Current Tasks</h2>
                 <hr>
                 <ul id="taskincomplete">
-                  <li><input type="checkbox"><label>Go shopping</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                  <li><input type="checkbox"><li>Go shopping</li><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
                 </ul>
             </div>
         

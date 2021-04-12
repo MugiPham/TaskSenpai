@@ -11,6 +11,10 @@
 	margin-bottom: 1em;
 }
 
+.nicksucks {
+	background: white;
+}
+
 .navbar a {
 	float: left;
 	color: #55bfe0;
@@ -35,7 +39,7 @@
 	flex-direction: column;
 }
 
-.currentIndexNav {
+.currentTasksNav {
 	background-color: beige;
 	display: flex;
 	padding: 1em;
@@ -45,7 +49,7 @@
 	border-radius: 25px;
 }
 
-.currentIndexNav a {
+.currentTasksNav a {
 	align-items: center;
 	font-style: normal;
 	font-size: 5em;
@@ -53,27 +57,14 @@
 
 body,
 html {
-	background-color: #a8a8a8;
+	background-color: #888;
 	font-family: "Open Sans", sans-serif;
 }
 
 .wrapper {
-	width: 325px;
-	margin: 20px;
+	width: 450px;
+	margin: 0 auto;
 	margin-bottom: 20px;
-	overflow: auto;
-}
-#taskCard{
-	float: left
-}
-#agendaCard{
-	float: left;
-}
-#projCard{
-	float: left;
-}
-#noteCard{
-	float: left;
 }
 
 .box {
@@ -85,12 +76,15 @@ html {
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
 	border-bottom: 1px solid #657275;
-	
 }
 .main {
 	background-color: #3a4142;
 	color: #25e0ea;
 	padding: 1px 5px 10px 10px;
+}
+
+textarea {
+	resize: none;
 }
 
 button {
@@ -102,7 +96,7 @@ button {
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
-	margin-right: .5em;
+	margin-right: 0.5em;
 }
 
 ul {
@@ -110,15 +104,15 @@ ul {
 	padding: 0;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-#createItem {
+#createtask {
 	background-color: #4baac7;
 	padding: 5px;
 	width: 231px;
@@ -128,7 +122,7 @@ ul {
 	margin-top: 1em;
 }
 
-#createItem:hover {
+#createtask:hover {
 	color: #1900ff;
 }
 

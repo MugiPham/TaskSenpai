@@ -13,7 +13,7 @@
 
 .navbar a {
 	float: left;
-	color: #55bfe0;
+	color: #29d6df;
 	text-align: center;
 	padding: 14px 14px;
 	font-size: 17px;
@@ -22,7 +22,7 @@
 }
 
 .navbar a.active {
-	background-color: #4baac7;
+	background-color: #38c5cc;
 	color: #3a4142;
 }
 
@@ -35,7 +35,7 @@
 	flex-direction: column;
 }
 
-.currentTasksNav {
+.currentIndexNav {
 	background-color: beige;
 	display: flex;
 	padding: 1em;
@@ -45,7 +45,7 @@
 	border-radius: 25px;
 }
 
-.currentTasksNav a {
+.currentIndexNav a {
 	align-items: center;
 	font-style: normal;
 	font-size: 5em;
@@ -53,14 +53,41 @@
 
 body,
 html {
-	background-color: #888;
+	background-color: #a8a8a8;
 	font-family: "Open Sans", sans-serif;
 }
 
+#greeting{
+	padding: 5px,3px;
+	font-size: 31px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#datetime{
+	padding: 5px,3px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
 .wrapper {
-	width: 450px;
-	margin: 0 auto;
+	width: 325px;
+	margin: 20px;
 	margin-bottom: 20px;
+	overflow: auto;
+}
+#taskCard{
+	float: left
+}
+#agendaCard{
+	float: left;
+}
+#projCard{
+	float: left;
+}
+#noteCard{
+	float: left;
 }
 
 .box {
@@ -97,15 +124,15 @@ ul {
 	padding: 0;
 }
 
-.addtasks {
+.subtitle {
 	margin-bottom: 20px;
 }
 
-.addtasks {
+.subtitle {
 	margin-bottom: 20px;
 }
 
-#createtask {
+#createItem {
 	background-color: #4baac7;
 	padding: 5px;
 	width: 231px;
@@ -115,7 +142,7 @@ ul {
 	margin-top: 1em;
 }
 
-#createtask:hover {
+#createItem:hover {
 	color: #1900ff;
 }
 

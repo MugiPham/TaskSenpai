@@ -56,6 +56,12 @@ html {
 	background-color: #888;
 	font-family: "Open Sans", sans-serif;
 }
+.createtaskbtn {
+	justify-self: center;
+	align-items: center;
+	padding: 2em 10em 2em 10em;
+	display: inline-flex;
+}
 
 .wrapper {
 	width: 450px;
@@ -72,16 +78,11 @@ html {
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
 	border-bottom: 1px solid #657275;
-	
 }
 .main {
 	background-color: #3a4142;
 	color: #25e0ea;
 	padding: 1px 5px 10px 10px;
-}
-
-textarea {
-	resize: none;
 }
 
 button {
@@ -93,7 +94,7 @@ button {
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
-	margin-right: .5em;
+	margin-right: 0.5em;
 }
 
 ul {
