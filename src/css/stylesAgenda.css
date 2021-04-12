@@ -11,6 +11,10 @@
 	margin-bottom: 1em;
 }
 
+.nicksucks {
+	background: white;
+}
+
 .navbar a {
 	float: left;
 	color: #55bfe0;
@@ -72,7 +76,6 @@ html {
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
 	border-bottom: 1px solid #657275;
-	
 }
 .main {
 	background-color: #3a4142;
@@ -93,7 +96,7 @@ button {
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
-	margin-right: .5em;
+	margin-right: 0.5em;
 }
 
 ul {
