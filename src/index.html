@@ -1,0 +1,132 @@
+<!-- This will be the homepage to the project, please keep this clean and create for html files for other sites -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Task Master</title>
+    <script src="scripts/scripts.js"></script>
+</head>
+
+<body>
+  <div>
+    <!-- navbar -->
+    <div class="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="projects.html">Projects</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="notes.html">Notes</a>
+
+    </div>
+
+    <!--task card-->
+    <div class="wrapper" id="taskCard">
+
+      <div class="box">
+        <h1>Tasks</h1>
+      </div>
+
+      <div class="main">
+        <div class="subtitle">
+
+          <div class="addedItem">
+            <h2>Current item</h2>
+            <hr>
+            <ul id="taskincomplete">
+              <li><input type="checkbox"><label>Go shopping</label><input type="text"></li>
+            </ul>
+          </div>
+
+          <div class="completeditem">
+            <h2>Completed item</h2>
+            <hr>
+            <ul id="taskcomplete">
+              <li><input type="checkbox" checked><label>Go for walk</label><input type="text"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--task card end-->
+
+    <!--agenda card-->
+    <div class="wrapper" id="agendaCard">
+
+      <div class="box">
+        <h1>Agenda</h1>
+      </div>
+
+      <div class="main">
+        <div class="subtitle">
+          <h2>Today:</h2>
+          <hr>
+        </div>
+
+        <div class="addedItem">
+          <ul id="taskincomplete">
+            <li><label>Dinner w/ John @5PM</label><input type="text"></li>
+          </ul>
+        </div>
+
+        <div class="completeditem">
+          <ul id="taskcomplete">
+            <li><label>Meeting w/ Jane @10AM</label><input type="text"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--agenda card end-->
+
+    <!--projects card-->
+    <div class="wrapper" id="projCard">
+
+      <div class="box">
+        <h1>Projects</h1>
+      </div>
+
+      <div class="main">
+
+        <div class="addedItem">
+          <h2>Current Projects</h2>
+          <hr>
+          <ul id="taskincomplete">
+            <li><label>Apollo Project</label><input type="text"></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!--agenda card end-->
+
+    <!--notes card-->
+    <div class="wrapper" id="noteCard">
+
+      <div class="box">
+        <h1>Notes</h1>
+      </div>
+
+      <div class="main">
+
+        <div class="addedItem">
+          <h2>Today's Notes</h2>
+          <hr>
+          <ul id="taskincomplete">
+            <li><label>Go shopping</label><input type="text"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--notes card end-->
+
+    <!-- Footer -->
+    <footer class="">
+
+    </footer>
+
+</body>
+
+</html>
