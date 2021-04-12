@@ -1,9 +1,10 @@
 //Find elements and give them a variable
 
+const text = { Task: [ { dueDate: '4-15-2021' } ] };
 let listTask = [];
-let today = new Date().toLocaleDateString()
+let today = new Date().toLocaleDateString();
 
-
+/*
 var taskInput = document.getElementById("tasktext");
 var addButton = document.getElementById("createtask");
 var incompletedTaskHolder = document.getElementById("taskincomplete");
@@ -36,8 +37,27 @@ var createNewTaskItem = function(taskString) {
   
   return listItem;
 }
+*/
+var addTask = function () {
+  console.log(text);
+  //console.log(text.data[0].dueDate);
+  /*var data = JSON.parse(text);
+  console.log(data);
+  data.date = new Date(data.date);
+  */
+}
 
+var createtask = function () {
 
+}
+
+var taskIncomplete = function() {
+  console.log("task incomplete");
+  var listItem = this.parentNode;
+  incompletedTaskHolder.appendChild(listItem);
+}
+
+/*
 var addTask = function() {
   textvalue = document.getElementById('tasktext').value;
   listTask.push(textvalue);
@@ -48,7 +68,7 @@ var addTask = function() {
   }
   localStorage.setItem('currentTask', JSON.stringify(text))
 }
-
+*/
 var editTask = function() {
   console.log("edit Task");
 }
@@ -63,12 +83,6 @@ var taskCompleted = function() {
   var listItem = this.parentNode;
   completedTaskHolder.appendChild(listItem);
   bindTasksEvents(listItem, taskIncomplete);
-}
-
-var taskIncomplete = function() {
-  console.log("task incomplete");
-  var listItem = this.parentNode;
-  incompletedTaskHolder.appendChild(listItem);
 }
 
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
