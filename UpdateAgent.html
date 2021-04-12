@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+    <!--Remember to change href to css/styles.css-->
+    <head>
+        <link rel="stylesheet" href="css/stylesAgenda.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>UpdateAgenda</title>
+        <script src="scripts/scripts.js"></script>
+        <style>
+            .collapsible {
+              background-color: #777;
+              color: white;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+              background-color: #555;
+            }
+            
+            .content {
+              padding: 0 18px;
+              display: none;
+              overflow: hidden;
+              background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+
+<!--Agenda Title in nav bar-->
+<body>
+    <div class="navbar" >
+        <a href="index.html">Home</a>
+        <a class ="active" href="agenda.html">Agenda</a>
+        <a href="projects.html">Projects</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="notes.html">Notes</a>
+
+    </div>
+    <form>
+        <div class = "wrapper">
+    
+            <div class="box">
+                <h1>Update Agenda</h1>
+            </div>
+        <!--Current agenda-->
+            <div class ="main">
+                <label>Name: </label>
+                    <input type = "name" name = "Go shopping" placeholder="Front-End Development">
+                <hr>
+                <label>Summary: </label>
+                    <textarea name="summary" placeholder="Work on the front-end design of website."></textarea>
+                <hr>
+                    <label>Start Date: </label>
+                        <input type="date" name="start">
+                <hr>
+                    <label>End Date: </label>
+                        <input type="date" name="end" value = "today">
+                <hr>
+    
+                <input type="submit" name="submit" value="Save">
+            </form>
+        </div>
+        <div>
+            <!--All Projects-->
+            <div class = "box">
+                <ul>
+                    <h1>Full Agenda</h1>
+                    <button type="button" class="collapsible">+</button>
+                    <div class="content">
+                    <ul>
+                        <li>
+                            <a href="example" title="example.com">Work on Paper</a>
+                        </li>
+                        <p>Start: 2/19/21</p>
+                        <p>End: 4/9/21</p>
+    
+                        <li>
+                            <a href="example" title="example.com">Work on Project</a>
+                        </li>
+                        <p>Start: 4/10/21</p>
+                        <p>End: 5/9/21</p>
+    
+                        <li>
+                            <a href="example" title="example.com">Work on Java Program</a>
+                        </li>
+                        <p>Start: 5/10/21</p>
+                        <p>End: 6/9/21</p> 
+                    </div>
+                </ul>
+            </div>
+        
+            <!--Archive Section-->
+            <div class = "box">
+                <ul>
+                    <h1>Archive</h1>
+                        <button type="button" class="collapsible">+</button>
+                        <div class="content">
+                            <ul>
+                                <li>old stuff</li>
+                                <li>End: 2/2/2020</li>
+                            </ul>
+                        </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+    
+    </body>
+</html>
