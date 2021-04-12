@@ -69,6 +69,7 @@ var addTask = function() {
   localStorage.setItem('currentTask', JSON.stringify(text))
 }
 */
+
 var editTask = function() {
   console.log("edit Task");
 }
@@ -89,11 +90,9 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 	var checkbox = taskListItem.querySelector("input[type=checkbox]");
 	var editButton = taskListItem.querySelector("button.edit");
 	var deleteButton = taskListItem.querySelector("button.delete");
-  
 	editButton.onclick = editTask;
 	deleteButton.onclick = deleteTask;
 	checkbox.onchange = checkBoxEventHandler;
-	
 }
 
 var ajaxRequest = function() {
