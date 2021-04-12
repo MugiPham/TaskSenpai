@@ -13,7 +13,7 @@
 
 .navbar a {
 	float: left;
-	color: #29d6df;
+	color: #55bfe0;
 	text-align: center;
 	padding: 14px 14px;
 	font-size: 17px;
@@ -22,7 +22,7 @@
 }
 
 .navbar a.active {
-	background-color: #38c5cc;
+	background-color: #4baac7;
 	color: #3a4142;
 }
 
@@ -35,7 +35,7 @@
 	flex-direction: column;
 }
 
-.currentIndexNav {
+.currentTasksNav {
 	background-color: beige;
 	display: flex;
 	padding: 1em;
@@ -45,7 +45,7 @@
 	border-radius: 25px;
 }
 
-.currentIndexNav a {
+.currentTasksNav a {
 	align-items: center;
 	font-style: normal;
 	font-size: 5em;
@@ -53,41 +53,14 @@
 
 body,
 html {
-	background-color: #a8a8a8;
+	background-color: #888;
 	font-family: "Open Sans", sans-serif;
 }
 
-#greeting{
-	padding: 5px,3px;
-	font-size: 31px;
-	font-style: normal;
-	font-weight: bold;
-}
-
-#datetime{
-	padding: 5px,3px;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-
 .wrapper {
-	width: 325px;
-	margin: 20px;
+	width:550px;
+	margin: 0 auto;
 	margin-bottom: 20px;
-	overflow: auto;
-}
-#taskCard{
-	float: left
-}
-#agendaCard{
-	float: left;
-}
-#projCard{
-	float: left;
-}
-#noteCard{
-	float: left;
 }
 
 .box {
@@ -124,15 +97,15 @@ ul {
 	padding: 0;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-.subtitle {
+.addtasks {
 	margin-bottom: 20px;
 }
 
-#createItem {
+#createtask {
 	background-color: #4baac7;
 	padding: 5px;
 	width: 231px;
@@ -142,7 +115,7 @@ ul {
 	margin-top: 1em;
 }
 
-#createItem:hover {
+#createtask:hover {
 	color: #1900ff;
 }
 
@@ -242,3 +215,39 @@ ul li.editMode label {
 li > .edit:hover {
 	color: #1900ff;
 }
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 5%;
+    border: none;
+    text-align: center;
+    float: right;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: lightgrey;
+    float: right;
+    width: 40%;
+  }
+
+  #tempname {
+      text-align: left;
+
+  }
+
+  a {
+      text-decoration: none;
+      color: black;
+  }
