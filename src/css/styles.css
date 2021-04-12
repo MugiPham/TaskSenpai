@@ -56,11 +56,15 @@ html {
 	background-color: #888;
 	font-family: "Open Sans", sans-serif;
 }
+
 .createtaskbtn {
 	justify-self: center;
 	align-items: center;
-	padding: 2em 10em 2em 10em;
+	padding: 2em 17em 2em 10em;
 	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	display: block;
 }
 
 .wrapper {
