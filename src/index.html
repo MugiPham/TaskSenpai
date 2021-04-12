@@ -4,36 +4,24 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="css/indexStyles.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Task Master</title>
-  <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Task Master</title>
+    <script src="scripts/scripts.js"></script>
 </head>
 
 <body>
   <div>
     <!-- navbar -->
     <div class="navbar">
-      <a></a>
-      <a class="active" href="index.html">Task Master</a>
-      <a class="agenda" href="agenda.html">Agenda</a>
-      <a class="projects" href="projects.html">Projects</a>
-      <a class="tasks" href="tasks.html">Tasks</a>
-      <a class="notes" href="notes.html">Notes</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="projects.html">Projects</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="notes.html">Notes</a>
 
     </div>
-
-    <p id="greeting">
-      Hello! Today is:
-    </p>
-
-    <p><span id="datetime"></span></p>
-
-    <script>
-      var dt = new Date();
-      document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " " + (("0" + dt.getHours() + 1).slice(-2)) + ":" + (("0" + dt.getMinutes() + 1).slice(-2));
-    </script>
 
     <!--task card-->
     <div class="wrapper" id="taskCard">
