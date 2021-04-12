@@ -57,6 +57,20 @@ html {
 	font-family: "Open Sans", sans-serif;
 }
 
+#greeting{
+	padding: 5px,3px;
+	font-size: 31px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#datetime{
+	padding: 5px,3px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
 .wrapper {
 	width: 325px;
 	margin: 20px;
