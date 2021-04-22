@@ -1,6 +1,3 @@
-//Find elements and give them a variable
-
-var text;
 
 var loadFile = function() {
   text = loadStrings("tasks.txt");
@@ -8,26 +5,24 @@ var loadFile = function() {
 }
 
 var setup = function(){
-  document.getElementById("demo").innerHTML = "hi";
-
+  document.getElementById("demo").innerHTML = "data";
 
 }
 
 
 
 function load() {
-  let JSONstring = JSON.stringify(Object);
-  console.log(JSONstring);
+  document.getElementById('demo').innerHTML = "hello";
+  document.getElementById('demo').innerHTML = "hello";
 
-  document.getElementById('demo').innerHTML = prop1;
-
-  /*
-  for(var i = 0;i < mydata.length; i++)
-  {
-      div.innerHTML = div.innerHTML + "<p class='demo' id="+i+">"+ mydata[i].name +"</p>" + "<br>";
-
-  } */
 }
+
+function loadcomplete() {
+  document.getElementById('demo1').innerHTML = "hello";
+  document.getElementById('demo1').innerHTML = "hello";
+
+}
+
 /*
 var taskInput = document.getElementById("tasktext");
 var addButton = document.getElementById("createtask");

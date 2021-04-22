@@ -64,6 +64,7 @@ html {
 	flex-direction: column;
 	float: inline-start;
 	padding: 0 6.5em 0 2em;
+	text-align: center;
 }
 
 .wrapper {
@@ -123,6 +124,7 @@ ul {
 	text-align: center;
 	cursor: pointer;
 	margin-top: 1em;
+	text-align: center;
 }
 
 #createtask:hover {
@@ -201,12 +203,6 @@ li > input[type="text"] {
 }
 li > .delete:hover {
 	color: #ff0000;
-}
-
-/* Completed */
-#taskcomplete label {
-	text-decoration: line-through;
-	color: #888;
 }
 
 /* Edit Task */

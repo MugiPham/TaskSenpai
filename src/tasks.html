@@ -28,25 +28,29 @@
       </div>
     
       <div class="main">
-        <button class="createtaskbtn" onClick="setup()"> Read Imported Tasks</button>
-        <button class="createtaskbtn" onClick="load()"> load Tasks</button>
           <div class="addedtasks">
             <h2>Current Tasks</h2>
             <hr>
-            <ul id="taskincomplete">
-              <p id="demo"> </p>
-              <a id="demo"> </p>
-              <p id="demo"> </p>
-              <p id="demo"> </p>
-              <p id="demo"> </p>
-            </ul>
+              <button id="createtask" onClick="load()"> Read Uncompleted Tasks</button>
+              <ul id="taskincomplete">
+                <p id="demo"> </p>
+                <a id="demo"> </p>
+                <p id="demo"> </p>
+                <p id="demo"> </p>
+                <p id="demo"> </p>
+              </ul>
           </div>
     
         <div class="completedtasks">
           <h2>Completed Tasks</h2>
           <hr>
           <ul id="taskcomplete">
-
+            <button id="createtask" onClick="loadcomplete()"> Read Completed Tasks</button>
+              <p id="demo1"> </p>
+              <a id="demo1"> </p>
+              <p id="demo1"> </p>
+              <p id="demo1"> </p>
+              <p id="demo1"> </p>
           </ul>
         </div>
       </div>
