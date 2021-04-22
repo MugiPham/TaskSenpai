@@ -4,11 +4,11 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/indexStyles.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Task Master</title>
-    <script src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="css/indexStyles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Task Master</title>
+  <script src="scripts/scripts.js"></script>
 </head>
 
 <body>
@@ -22,16 +22,16 @@
       <a href="notes.html">Notes</a>
 
     </div>
-    
+
     <p id="greeting">
       Hello! Today is:
     </p>
 
-    <p><span id="datetime"></span></p>
+    <p><span id="date-time"></span></p>
 
     <script>
       var dt = new Date();
-      document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " " + (("0" + dt.getHours() + 1).slice(-2)) + ":" + (("0" + dt.getMinutes() + 1).slice(-2));
+      document.getElementById('date-time').innerHTML=dt;
     </script>
 
     <!--task card-->
@@ -97,7 +97,7 @@
           <h2>Current Projects</h2>
           <hr>
           <ul id="taskincomplete">
-            <li><label>Apollo 11 Project</label><input type="text"></li>
+            <li><label>Apollo 11 Project</label><button type="button" class="collapsible">+</button></li>
           </ul>
         </div>
 
@@ -118,8 +118,14 @@
           <h2>Today's Notes</h2>
           <hr>
           <ul id="taskincomplete">
-            <li><label>Don't Forget</label><input type="text"><p>"Don't forget flag for moon landing."</p></li>
-            <li><label>Catch Phrase ideas</label><input type="text"><p>"One small step for man. One giant leap for mankind."</p></li>
+            <div class="content">
+              <li><label id=title>Don't Forget</label><input type="text">
+                <p>"Don't forget flag for moon landing."</p>
+              </li>
+              <li><label id=title>Catch Phrase ideas</label><input type="text">
+                <p>"One small step for man. One giant leap for mankind."</p>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -128,7 +134,7 @@
 
     <!-- Footer -->
     <footer>
-<!-- <p>brought to you by our viewers like you... Thank you!</p> -->
+      <!-- <p>brought to you by our viewers like you... Thank you!</p> -->
     </footer>
 
 </body>

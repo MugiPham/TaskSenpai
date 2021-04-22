@@ -64,10 +64,10 @@ html {
 	font-weight: bold;
 }
 
-#datetime{
+#date-time{
 	padding: 5px,3px;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: initial;
 }
 
 
@@ -89,6 +89,12 @@ html {
 #noteCard{
 	float: left;
 }
+
+#title{
+font-size: medium;
+font-weight: bold;
+}
+
 
 .box {
 	padding: 1px 0 1px 0;
@@ -150,10 +156,7 @@ li * {
 	float: left;
 }
 li,
-h3 {
-	clear: both;
-	list-style: none;
-}
+
 input,
 button {
 	outline: none;
