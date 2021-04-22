@@ -6,7 +6,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Tasks</title>
-    <script src="scripts/scripts.js"></script>
+    <script>
+      var old = document.getElementById("color");
+      old.innerHTML = str;
+
+      function changeColor(color) {
+          document.body.style.background = color;
+      }
+          
+      function bg() {
+          changeColor('maroon');
+      }         
+
+      //A little easter egg to change background on click, was supposed to flash but it didn't work :(
+      var i = 0;
+      var task = setInterval(flash, 1000);
+      function flash() {
+        document.documentElement.style.backgroundColor=(i = ~i) ? '#00FFFF' : '#9EFF00';
+      }
+    </script>
 
 </head>
 
