@@ -58,7 +58,7 @@ html {
 }
 
 .wrapper {
-	width:450px;
+	width:550px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
@@ -83,17 +83,13 @@ html {
 button {
 	background: #55bfe0;
 	border: 0px;
-	border-radius: 5%;
 	color: #3a4142;
-	font-size: 30px;
+	font-size: 15px;
 	width: 60px;
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 	margin-right: .5em;
-	text-align: center;
-	height: 25px;
-
 }
 
 ul {
@@ -134,7 +130,6 @@ h3 {
 input,
 button {
 	outline: none;
-	text-align: center;
 }
 
 label[for="new-task"] {
@@ -223,15 +218,15 @@ li > .edit:hover {
 
 .collapsible {
     background-color: #777;
-    color: lightgrey;
+    color: white;
     cursor: pointer;
-    /* padding: 18px; */
+    padding: 18px;
     width: 5%;
     border: none;
     text-align: center;
     float: right;
     outline: none;
-    font-size: 20px;
+    font-size: 15px;
   }
   
   .active, .collapsible:hover {
@@ -242,13 +237,9 @@ li > .edit:hover {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: lightgrey;
+    background-color: grey;
     float: right;
     width: 40%;
-  }
-  .blacktext {
-	  color: black;
-	  text-decoration: underline;
   }
 
   #tempname {
