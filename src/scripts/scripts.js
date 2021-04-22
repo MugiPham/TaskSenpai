@@ -12,14 +12,14 @@ var setup = function(){
 
 
 function load() {
-  document.getElementById('demo').innerHTML = "hello";
-  document.getElementById('demo').innerHTML = "hello";
+  document.getElementById('demo').innerHTML = "Task1";
+  document.getElementById('demo').innerHTML = "Task2";
 
 }
 
 function loadcomplete() {
-  document.getElementById('demo1').innerHTML = "hello";
-  document.getElementById('demo1').innerHTML = "hello";
+  document.getElementById('demo1').innerHTML = "Task1";
+  document.getElementById('demo1').innerHTML = "Task2";
 
 }
 
