@@ -60,11 +60,11 @@ html {
 .createtaskbtn {
 	justify-self: center;
 	align-items: center;
-	padding: 2em 17em 2em 10em;
-	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	display: block;
+	float: inline-start;
+	padding: 0 6.5em 0 2em;
+	text-align: center;
 }
 
 .wrapper {
@@ -87,6 +87,8 @@ html {
 	background-color: #3a4142;
 	color: #25e0ea;
 	padding: 1px 5px 10px 10px;
+	justify-content: center;
+	align-items: center;
 }
 
 button {
@@ -122,6 +124,7 @@ ul {
 	text-align: center;
 	cursor: pointer;
 	margin-top: 1em;
+	text-align: center;
 }
 
 #createtask:hover {
@@ -200,12 +203,6 @@ li > input[type="text"] {
 }
 li > .delete:hover {
 	color: #ff0000;
-}
-
-/* Completed */
-#taskcomplete label {
-	text-decoration: line-through;
-	color: #888;
 }
 
 /* Edit Task */

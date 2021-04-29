@@ -1,8 +1,27 @@
-//Find elements and give them a variable
 
-const text = { Task: [ { dueDate: '4-15-2021' } ] };
-let listTask = [];
-let today = new Date().toLocaleDateString();
+var loadFile = function() {
+  text = loadStrings("tasks.txt");
+  console.log(text)
+}
+
+var setup = function(){
+  document.getElementById("demo").innerHTML = "data";
+
+}
+
+
+
+function load() {
+  document.getElementById('demo').innerHTML = "Task1";
+  document.getElementById('demo').innerHTML = "Task2";
+
+}
+
+function loadcomplete() {
+  document.getElementById('demo1').innerHTML = "Task1";
+  document.getElementById('demo1').innerHTML = "Task2";
+
+}
 
 /*
 var taskInput = document.getElementById("tasktext");
