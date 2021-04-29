@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/projects.css">
+  </head>
+
+  <body>
+
+      <section id="mySection">
+
+      </section>
+
+    <script>
+    var projects; 
+    const section = document.querySelector('section');
+        document.getElementById("mySection").onload = function () {populateProjectList()};
+    let requestURL = 'https://raw.githubusercontent.com/Armagregon15/Armagregon.github.io/master/project.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL, true);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function() {
+      const response = request.response;
+      console.log(response['projects'][0]['PName']);
+      populateProjectList(response);
+    
+    }
+
+
+
+    function populateProjectList(response) {
+    
+      for(let i = 0; i < 3; i++) {
+        
+        const myDiv = document.createElement('div');
+        const liName = document.createElement('li');
+        const liStart = document.createElement('li');
+        const liNotes = document.createElement('li');
+        const liAgenda = document.createElement('li');
+        const liTask = document.createElement('li');
+        const liEnd = document.createElement('li');
+        const myList = document.createElement('ul');
+
+        liName.textContent = response['projects'][i]['PName'];
+        liStart.textContent = 'Start: ' + response['projects'][i]['Start'];
+        liNotes.textContent = 'Notes: ' + response['projects'][i]['NumNotes'];
+        liAgenda.textContent = 'Agendas:' + response['projects'][i]['NumAgenda'];
+        liTask.textContent = 'Tasks: ' + response['projects'][i]['NumTasks'];
+        liEnd.textContent = 'End: ' + response['projects'][i]['End'];
+
+
+        myDiv.appendChild(myList);
+        myDiv.appendChild(liName);
+        myDiv.appendChild(liStart);
+        myDiv.appendChild(liNotes);
+        myDiv.appendChild(liAgenda);
+        myDiv.appendChild(liTask);
+        myDiv.appendChild(liEnd);
+        // myDiv.appendChild(myList);
+
+        section.appendChild(myDiv);
+     }
+    }
+</script>
+  </body>
+</html>
