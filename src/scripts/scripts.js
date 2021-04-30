@@ -1,8 +1,50 @@
 //Find elements and give them a variable
 
+<<<<<<< Updated upstream
 const text = { Task: [ { dueDate: '4-15-2021' } ] };
 let listTask = [];
 let today = new Date().toLocaleDateString();
+=======
+
+var loadFile = function() {
+  text = loadStrings("tasks.txt");
+  console.log(text)
+}
+
+var setup = function(){
+  document.getElementById("demo").innerHTML = "data";
+
+}
+
+
+
+function load() {
+  let request = new XMLHttpRequest();
+  let requestURL = 'https://raw.githubusercontent.com/Armagregon15/Armagregon.github.io/master/task.json';
+  request.open('GET', requestURL, true);
+  request.responseType = 'json';
+  request.send();
+  request.onload = ()=>{
+    console.log(request);
+    if (request.status === 200){
+      //console.log(JSON.stringify(request.response));
+      let data = [];
+      data = request.response;
+      console.log(data.tasks);
+      document.getElementById("taskincomplete").innerHTML= data.tasks;
+      //console.log(data[0].Name);
+    }
+  } 
+}
+
+
+
+function loadcomplete() {
+  document.getElementById('demo1').innerHTML = "Task1";
+  document.getElementById('demo1').innerHTML = "Task2";
+
+}
+>>>>>>> Stashed changes
 
 /*
 var taskInput = document.getElementById("tasktext");
