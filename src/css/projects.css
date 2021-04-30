@@ -237,7 +237,7 @@ li > .edit:hover {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-
+	color: black;
     background-color: grey;
 
     float: right;
