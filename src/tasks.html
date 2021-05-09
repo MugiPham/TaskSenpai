@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script src="scripts/scripts.js"></script>
+    	<script src=
+        "https://code.jquery.com/jquery-3.5.1.js">
+	  </script>
     <title>Tasks</title>
 
 </head>
@@ -28,34 +30,50 @@
       </div>
     
       <div class="main">
-          <div class="addedtasks">
-            <h2>Current Tasks</h2>
-            <hr>
-              <button id="createtask" onClick="load()"> Read Uncompleted Tasks</button>
-              <ul id="taskincomplete">
-                <p id="demo"> </p>
-                <a id="demo"> </p>
-                <p id="demo"> </p>
-                <p id="demo"> </p>
-                <p id="demo"> </p>
-              </ul>
-          </div>
-    
-        <div class="completedtasks">
-          <h2>Completed Tasks</h2>
-          <hr>
-          <ul id="taskcomplete">
-            <button id="createtask" onClick="loadcomplete()"> Read Completed Tasks</button>
-              <p id="demo1"> </p>
-              <a id="demo1"> </p>
-              <p id="demo1"> </p>
-              <p id="demo1"> </p>
-              <p id="demo1"> </p>
-          </ul>
-        </div>
+    <section>
+		<!-- TABLE CONSTRUCTION-->
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>Task Name</th>
+				<th>Date Created</th>
+				<th>Body</th>
+			</tr>
+
+			<script>
+				$(document).ready(function () {
+
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("tasks.json",
+							function (data) {
+						var task = '';
+
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
+
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							task += '<tr>';
+							task += '<td>' +
+								value.TName + '</td>';
+
+							task += '<td>' +
+								value.Date + '</td>';
+
+							task += '<td>' +
+								value.Body + '</td>';
+                
+							task += '</tr>';
+						});
+						
+						//INSERTING ROWS INTO TABLE
+						$('#table').append(task);
+					});
+				});
+			</script>
+	</section>
       </div>
     </div>
-
 <!--
     <div class="base">
         <div class="currentTasksNav">

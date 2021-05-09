@@ -221,3 +221,32 @@ ul li.editMode label {
 li > .edit:hover {
 	color: #1900ff;
 }
+
+table {
+	margin: 0 auto;
+	font-size: large;
+	border: 1px solid #55bfe0;
+}
+
+h1 {
+	text-align: center;
+	color: #55bfe0;
+	font-size: xx-large;
+}
+
+td {
+	border: 1px solid #55bfe0;
+}
+
+th,
+td {
+	font-weight: bold;
+	border: 1px solid #55bfe0;
+	padding: 10px;
+	text-align: center;
+	color: #55bfe0;
+}
+
+td {
+	font-weight: lighter;
+}
