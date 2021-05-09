@@ -36,7 +36,7 @@
 
     <script>
       var dt = new Date();
-      document.getElementById('date-time').innerHTML=dt;
+      document.getElementById('date-time').innerHTML = dt;
     </script>
     <!-- time/date end-->
 
@@ -48,100 +48,164 @@
       </div>
 
       <div class="main">
-        <div class="subtitle">
-
-          <div class="addedItem">
-            <h2>Current item</h2>
-            <hr>
-            <ul id="taskincomplete">
-              <li><input type="checkbox"><label>Go to the moon.</label><input type="text"></li>
-            </ul>
-          </div>
+        <div class="addedtasks">
+          <h2>Current Tasks</h2>
+          <hr>
+          <button id="createtask" onClick="load()">Uncompleted Tasks</button>
+          <ul id="taskincomplete">
+            <p id="demo"> </p>
+            <a id="demo"> </p>
+              <p id="demo"> </p>
+              <p id="demo"> </p>
+              <p id="demo"> </p>
+          </ul>
         </div>
       </div>
     </div>
-    <!--task card end-->
+  </div>
+  <!--task card end-->
 
-    <!--agenda card-->
-    <div class="wrapper" id="agendaCard">
+  <!--agenda card-->
+  <div class="wrapper" id="agendaCard">
+
+    <div class="box">
+      <h1>Agenda</h1>
+    </div>
+
+    <div class="main">
+      <div class="subtitle">
+        <h2>Today:</h2>
+        <hr>
+      </div>
+
+      <div class="addedItem">
+        <ul id="taskincomplete">
+          <li><label>Meeting w/ Buzz @2PM</label><input type="text"></li>
+        </ul>
+      </div>
+
+      <div class="completeditem">
+        <ul id="taskcomplete">
+          <li><label>Meeting w/ Michael @10AM</label><input type="text"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--agenda card end-->
+
+  <!--projects card-->
+  <div class="wrapper" id="projCard">
+    <div class="wrapper">
 
       <div class="box">
-        <h1>Agenda</h1>
+        <h1>Project Manager</h1>
       </div>
 
       <div class="main">
-        <div class="subtitle">
-          <h2>Today:</h2>
-          <hr>
-        </div>
+        <section id="projSection">
 
-        <div class="addedItem">
-          <ul id="taskincomplete">
-            <li><label>Meeting w/ Buzz @2PM</label><input type="text"></li>
-          </ul>
-        </div>
+          <script>
 
-        <div class="completeditem">
-          <ul id="taskcomplete">
-            <li><label>Meeting w/ Michael @10AM</label><input type="text"></li>
-          </ul>
-        </div>
+            var projects;
+            const section = document.querySelector('section');
+            document.getElementById("projSection").onload = function () { populateProjectList() };
+            let requestURL = 'https://raw.githubusercontent.com/Armagregon15/Armagregon.github.io/master/project.json';
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL, true);
+            request.responseType = 'json';
+            request.send();
+
+            request.onload = function () {
+              const response = request.response;
+              console.log(response['projects'][0]['PName']);
+              populateProjectList(response);
+            }
+
+            function populateProjectList(response) {
+
+              for (let i = 0; i < 3; i++) {
+                var todayDate = new Date();
+
+                var projEnd = new Date(response['projects'][i]['ey'], response['projects'][i]['em'], response['projects'][i]['ed']);
+                var projStart = new Date(response['projects'][i]['sy'], response['projects'][i]['sm'], response['projects'][i]['sd']);
+                console.log(projEnd);
+                console.log(projStart);
+                console.log(todayDate);
+                if (todayDate > projStart)
+                  if (projEnd > todayDate) {
+
+                    const myDiv = document.createElement('div');
+                    const contentDiv = document.createElement('div');
+                    const liName = document.createElement('li');
+                    const liStart = document.createElement('li');
+                    const liNotes = document.createElement('li');
+                    const liAgenda = document.createElement('li');
+                    const liTask = document.createElement('li');
+                    const liEnd = document.createElement('li');
+                    const myList = document.createElement('ul');
+                    const expButton = document.createElement('button');
+                    const subList = document.createElement('ul');
+
+                    contentDiv.className = "content";
+                    expButton.className = "collapsible";
+                    expButton.setAttribute("type", "button");
+                    expButton.textContent = '+';
+                    liName.textContent = response['projects'][i]['PName'];
+                    liStart.textContent = 'Start: ' + response['projects'][i]['Start'];
+                    liNotes.textContent = 'Notes: ' + response['projects'][i]['NumNotes'];
+                    liAgenda.textContent = 'Agendas: ' + response['projects'][i]['NumAgenda'];
+                    liTask.textContent = 'Tasks: ' + response['projects'][i]['NumTasks'];
+                    liEnd.textContent = 'End: ' + response['projects'][i]['End'];
+
+                    section.appendChild(myDiv);
+                    myDiv.appendChild(myList);
+                    myList.appendChild(liName);
+                    liName.appendChild(expButton);
+                    liName.appendChild(contentDiv);
+                    contentDiv.appendChild(subList);
+                    subList.appendChild(liStart);
+                    subList.appendChild(liNotes);
+                    subList.appendChild(liAgenda);
+                    subList.appendChild(liTask);
+                    subList.appendChild(liEnd);
+
+                  }
+              }
+            }
+          </script>
+        </section>
       </div>
     </div>
-    <!--agenda card end-->
+  </div>
+  <!--projects card end-->
 
-    <!--projects card-->
-    <div class="wrapper" id="projCard">
+  <!--notes card-->
+  <div class="wrapper" id="noteCard">
 
-      <div class="box">
-        <h1>Projects</h1>
-      </div>
-
-      <div class="main">
-
-        <div class="addedItem">
-          <h2>Current Projects</h2>
-          <hr>
-          <ul id="taskincomplete">
-            <li><label>Apollo 11 Project</label><button type="button" class="collapsible">+</button></li>
-          </ul>
-        </div>
-
-      </div>
+    <div class="box">
+      <h1>Notes</h1>
     </div>
-    <!--agenda card end-->
 
-    <!--notes card-->
-    <div class="wrapper" id="noteCard">
+    <div class="main">
 
-      <div class="box">
-        <h1>Notes</h1>
-      </div>
+      <table class="note-table">
+        <tr>
+          <td class="header">Title</td>
+          <td class="header">Note</td>
+        </tr>
+      </table>
 
-      <div class="main">
 
-        <div class="addedItem">
-          <h2>Today's Notes</h2>
-          <hr>
-          <ul id="taskincomplete">
-            <div class="content">
-              <li><label id=title>Don't Forget</label><input type="text">
-                <p>"Don't forget flag for moon landing."</p>
-              </li>
-              <li><label id=title>Catch Phrase ideas</label><input type="text">
-                <p>"One small step for man. One giant leap for mankind."</p>
-              </li>
-            </div>
-          </ul>
-        </div>
-      </div>
+      <script src="notes.js"></script>
+    </body>
     </div>
-    <!--notes card end-->
+  </div>
+  <!--notes card end-->
 
-    <!-- Footer -->
-    <footer>
-      <!-- <p>brought to you by our viewers like you... Thank you!</p> -->
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <!-- <p>brought to you by our viewers like you... Thank you!</p> -->
+  </footer>
 
 </body>
 
