@@ -222,31 +222,46 @@ li > .edit:hover {
 	color: #1900ff;
 }
 
-table {
-	margin: 0 auto;
-	font-size: large;
-	border: 1px solid #55bfe0;
+body {
+	margin: 20px auto;
+	font-family: "Lato";
+	background: #666;
+	color: #fff;
 }
 
-h1 {
-	text-align: center;
-	color: #55bfe0;
-	font-size: xx-large;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-td {
-	border: 1px solid #55bfe0;
-}
-
-th,
-td {
+h2 {
 	font-weight: bold;
-	border: 1px solid #55bfe0;
-	padding: 10px;
-	text-align: center;
-	color: #55bfe0;
+	font-size: 2rem;
 }
 
-td {
-	font-weight: lighter;
+p {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+ul,
+li {
+	list-style: none;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+ul li a {
+	text-decoration: none;
+	color: #000;
+	background: #25e0ea;
+	display: block;
+	height: 10em;
+	width: 10em;
+	padding: 1em;
+}
+ul li {
+	margin: 1em;
 }
