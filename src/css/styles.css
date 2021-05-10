@@ -57,6 +57,16 @@ html {
 	font-family: "Open Sans", sans-serif;
 }
 
+.createtaskbtn {
+	justify-self: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	float: inline-start;
+	padding: 0 6.5em 0 2em;
+	text-align: center;
+}
+
 .wrapper {
 	width: 450px;
 	margin: 0 auto;
@@ -72,12 +82,13 @@ html {
 	text-shadow: 1px 1px 3px #000;
 	background-color: #3a4142;
 	border-bottom: 1px solid #657275;
-	
 }
 .main {
 	background-color: #3a4142;
 	color: #25e0ea;
 	padding: 1px 5px 10px 10px;
+	justify-content: center;
+	align-items: center;
 }
 
 button {
@@ -89,7 +100,7 @@ button {
 	margin: 10px 0 0;
 	font-family: Lato, sans-serif;
 	cursor: pointer;
-	margin-right: .5em;
+	margin-right: 0.5em;
 }
 
 ul {
@@ -113,6 +124,7 @@ ul {
 	text-align: center;
 	cursor: pointer;
 	margin-top: 1em;
+	text-align: center;
 }
 
 #createtask:hover {
@@ -193,12 +205,6 @@ li > .delete:hover {
 	color: #ff0000;
 }
 
-/* Completed */
-#taskcomplete label {
-	text-decoration: line-through;
-	color: #888;
-}
-
 /* Edit Task */
 ul li input[type="text"] {
 	display: none;
@@ -214,4 +220,33 @@ ul li.editMode label {
 
 li > .edit:hover {
 	color: #1900ff;
+}
+
+table {
+	margin: 0 auto;
+	font-size: large;
+	border: 1px solid #55bfe0;
+}
+
+h1 {
+	text-align: center;
+	color: #55bfe0;
+	font-size: xx-large;
+}
+
+td {
+	border: 1px solid #55bfe0;
+}
+
+th,
+td {
+	font-weight: bold;
+	border: 1px solid #55bfe0;
+	padding: 10px;
+	text-align: center;
+	color: #55bfe0;
+}
+
+td {
+	font-weight: lighter;
 }

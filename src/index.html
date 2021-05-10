@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Task Master</title>
   <script src="scripts/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -47,33 +48,48 @@
         <h1><a href="tasks.html" class="sectionLinks">Tasks</a></h1>
       </div>
       <div class="main">
-        <div class="addtasks">
-        <h2>Add Task</h2>
-          <hr>
-        </div>
-        
-        <input type="text" id="tasktext" name="tasktext" placeholder="E.g: Do Chores">
-    
-              <div id="createtask" class="addtasks()" onClick="createNewTaskItem">
-                + Create Task
-              </div>
-        
-            <div class="addedtasks">
-                <h2>Current Tasks</h2>
-                <hr>
-                <ul id="taskincomplete">
-                  <li><input type="checkbox"><label>Go shopping</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-                </ul>
-            </div>
-        
-            <div class="completedtasks">
-              <h2>Completed Tasks</h2>
-              <hr>
-              <ul id="taskcomplete">
-                 <li><input type="checkbox" checked><label>I wanan go to sleep</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-              </ul>
-            </div>
-        
+    <section>
+		<!-- TABLE CONSTRUCTION-->
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>Task Name</th>
+				<th>Date Created</th>
+				<th>Body</th>
+			</tr>
+
+			<script>
+				$(document).ready(function () {
+
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("tasks.json",
+							function (data) {
+						var task = '';
+
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
+
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							task += '<tr>';
+							task += '<td>' +
+								value.TName + '</td>';
+
+							task += '<td>' +
+								value.Date + '</td>';
+
+							task += '<td>' +
+								value.Body + '</td>';
+                
+							task += '</tr>';
+						});
+						
+						//INSERTING ROWS INTO TABLE
+						$('#table').append(task);
+					});
+				});
+			</script>
+	</section>
       </div>
     </div>
   </div>
