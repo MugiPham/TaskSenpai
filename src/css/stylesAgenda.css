@@ -11,13 +11,9 @@
 	margin-bottom: 1em;
 }
 
-.nicksucks {
-	background: white;
-}
-
 .navbar a {
 	float: left;
-	color: #55bfe0;
+	color: #29d6df;
 	text-align: center;
 	padding: 14px 14px;
 	font-size: 17px;
@@ -26,8 +22,12 @@
 }
 
 .navbar a.active {
-	background-color: #4baac7;
+	background-color: #38c5cc;
 	color: #3a4142;
+}
+
+.nicksucks {
+	background: white;
 }
 
 .base {
@@ -221,4 +221,8 @@ ul li.editMode label {
 
 li > .edit:hover {
 	color: #1900ff;
+}
+a {
+	text-decoration: none;
+	color: black;
 }

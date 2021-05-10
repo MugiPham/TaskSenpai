@@ -10,6 +10,22 @@
 	margin-top: 0;
 	margin-bottom: 1em;
 }
+
+.navbar a {
+	float: left;
+	color: #29d6df;
+	text-align: center;
+	padding: 14px 14px;
+	font-size: 17px;
+	border-right: 1px solid #657275;
+	justify-items: space-between;
+}
+
+.navbar a.active {
+	background-color: #38c5cc;
+	color: #3a4142;
+}
+
 .selectionTab {
 	background-color: #3a4142;
 	display: flex;
@@ -19,21 +35,6 @@
 	display: flex;
 	margin-top: 0;
 	margin-bottom: 1em;
-}
-
-.navbar a {
-	float: left;
-	color: #55bfe0;
-	text-align: center;
-	padding: 14px 14px;
-	font-size: 17px;
-	border-right: 1px solid #657275;
-	justify-items: space-between;
-}
-
-.navbar a.active {
-	background-color: #4baac7;
-	color: #3a4142;
 }
 
 .base {
@@ -63,7 +64,7 @@
 
 body,
 html {
-	background-color: #25e0ea;
+	background-color: #888;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -236,4 +237,9 @@ ul li.editMode label {
 
 li > .edit:hover {
 	color: #1900ff;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }

@@ -13,7 +13,7 @@
 
 .navbar a {
 	float: left;
-	color: #55bfe0;
+	color: #29d6df;
 	text-align: center;
 	padding: 14px 14px;
 	font-size: 17px;
@@ -22,7 +22,7 @@
 }
 
 .navbar a.active {
-	background-color: #4baac7;
+	background-color: #38c5cc;
 	color: #3a4142;
 }
 
@@ -98,7 +98,7 @@ button {
 	font-size: 15px;
 	width: 60px;
 	margin: 10px 0 0;
-	font-family: Lato, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	cursor: pointer;
 	margin-right: 0.5em;
 }
@@ -162,7 +162,7 @@ input[type="text"] {
 	border: 1px solid #ddd;
 	background: #fff;
 	border-radius: 6px;
-	font-family: Lato, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	color: #888;
 }
 input[type="text"]:focus {
@@ -224,8 +224,8 @@ li > .edit:hover {
 
 body {
 	margin: 20px auto;
-	font-family: "Lato";
-	background: #666;
+	font-family: "Open Sans";
+	background: #888;
 	color: #fff;
 }
 
@@ -255,8 +255,7 @@ ul {
 }
 ul li a {
 	text-decoration: none;
-	color: #000;
-	background: #25e0ea;
+	color: #25e0ea;
 	display: block;
 	height: 10em;
 	width: 10em;
@@ -264,4 +263,9 @@ ul li a {
 }
 ul li {
 	margin: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }

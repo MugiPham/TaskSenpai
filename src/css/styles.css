@@ -13,7 +13,7 @@
 
 .navbar a {
 	float: left;
-	color: #55bfe0;
+	color: #29d6df;
 	text-align: center;
 	padding: 14px 14px;
 	font-size: 17px;
@@ -22,7 +22,7 @@
 }
 
 .navbar a.active {
-	background-color: #4baac7;
+	background-color: #38c5cc;
 	color: #3a4142;
 }
 
@@ -92,7 +92,7 @@ html {
 }
 
 button {
-	background: #55bfe0;
+	background: #25e0ea;
 	border: 0px;
 	color: #3a4142;
 	font-size: 15px;
@@ -225,28 +225,33 @@ li > .edit:hover {
 table {
 	margin: 0 auto;
 	font-size: large;
-	border: 1px solid #55bfe0;
+	border: 1px solid #25e0ea;
 }
 
 h1 {
 	text-align: center;
-	color: #55bfe0;
+	color: #25e0ea;
 	font-size: xx-large;
 }
 
 td {
-	border: 1px solid #55bfe0;
+	border: 1px solid #25e0ea;
 }
 
 th,
 td {
 	font-weight: bold;
-	border: 1px solid #55bfe0;
+	border: 1px solid #25e0ea;
 	padding: 10px;
 	text-align: center;
-	color: #55bfe0;
+	color: #25e0ea;
 }
 
 td {
 	font-weight: lighter;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
