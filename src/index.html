@@ -101,11 +101,8 @@
         <section id="projSection">
 
           <script>
-
-
             var projects;
             const section = document.querySelector('section');
-            document.getElementById("mySection").onload = function () { populateProjectList() };
             let requestURL = 'https://raw.githubusercontent.com/Armagregon15/Armagregon.github.io/master/project.json';
             let request = new XMLHttpRequest();
             request.open('GET', requestURL, true);
@@ -116,10 +113,7 @@
               const response = request.response;
               console.log(response['projects'][0]['PName']);
               populateProjectList(response);
-
             }
-
-
 
             function populateProjectList(response) {
 
@@ -182,20 +176,22 @@
                     subList.appendChild(liEnd);
 
                     var coll = document.getElementsByClassName("collapsible");
+
+
+                    }
                   }
+                  for (let i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display == "block") {
+                          content.style.display = "none";
+                        } else {
+                          content.style.display = "block";
+                        }
+                      });
+                }
               }
-              for (let i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function () {
-                  this.classList.toggle("active");
-                  var content = this.nextElementSibling;
-                  if (content.style.display == "block") {
-                    content.style.display = "none";
-                  } else {
-                    content.style.display = "block";
-                  }
-                });
-              }
-            }
           </script>
         </section>
       </div>
