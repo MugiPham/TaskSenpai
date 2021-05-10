@@ -74,17 +74,25 @@
                   const liEnd = document.createElement('li');
                   const myList = document.createElement('ul');
                   const expButton = document.createElement('button');
+                  
                   const subList = document.createElement('ul');
+                  const aNotes = document.createElement('a');
+                  const aAgenda = document.createElement('a');
+                  const aTask = document.createElement('a');
 
                   contentDiv.className = "content";
                   expButton.className = "collapsible";
                   expButton.setAttribute("type", "button");
                   expButton.textContent = '+';
+                  
+                  aAgenda.href = "agenda.html";
+                  aNotes.href ="notes.html";
+                  aTask.href = "tasks.html";
                   liName.textContent = response['projects'][i]['PName'];
                   liStart.textContent = 'Start: ' + response['projects'][i]['Start'];
-                  liNotes.textContent = 'Notes: ' + response['projects'][i]['NumNotes'];
-                  liAgenda.textContent = 'Agendas: ' + response['projects'][i]['NumAgenda'];
-                  liTask.textContent = 'Tasks: ' + response['projects'][i]['NumTasks'];
+                  aNotes.textContent = 'Notes: ' + response['projects'][i]['NumNotes'];
+                  aAgenda.textContent = 'Agendas: ' + response['projects'][i]['NumAgenda'];
+                  aTask.textContent = 'Tasks: ' + response['projects'][i]['NumTasks'];
                   liEnd.textContent = 'End: ' + response['projects'][i]['End'];
 
                   section.appendChild(myDiv);
@@ -97,9 +105,13 @@
                   contentDiv.appendChild(subList);
                   //subList.appendChild(liStart);
                   subList.appendChild(liStart);
+                  
                   subList.appendChild(liNotes);
+                  liNotes.appendChild(aNotes);
                   subList.appendChild(liAgenda);
+                  liAgenda.appendChild(aAgenda);
                   subList.appendChild(liTask);
+                  liTask.appendChild(aTask);
                   subList.appendChild(liEnd);
                   // myDiv.appendChild(myList);
 
