@@ -47,15 +47,33 @@
         <h1><a href="tasks.html" class="sectionLinks">Tasks</a></h1>
       </div>
       <div class="main">
-        <div class="subtitle">
-          <div class="addedItem">
-            <h2>Current item</h2>
-            <hr>
-            <ul id="taskincomplete">
-              <li><input type="checkbox"><label>Go to the moon.</label><input type="text"></li>
-            </ul>
-          </div>
+        <div class="addtasks">
+        <h2>Add Task</h2>
+          <hr>
         </div>
+        
+        <input type="text" id="tasktext" name="tasktext" placeholder="E.g: Do Chores">
+    
+              <div id="createtask" class="addtasks()" onClick="createNewTaskItem">
+                + Create Task
+              </div>
+        
+            <div class="addedtasks">
+                <h2>Current Tasks</h2>
+                <hr>
+                <ul id="taskincomplete">
+                  <li><input type="checkbox"><label>Go shopping</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                </ul>
+            </div>
+        
+            <div class="completedtasks">
+              <h2>Completed Tasks</h2>
+              <hr>
+              <ul id="taskcomplete">
+                 <li><input type="checkbox" checked><label>I wanan go to sleep</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+              </ul>
+            </div>
+        
       </div>
     </div>
   </div>
