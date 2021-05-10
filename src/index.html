@@ -46,19 +46,15 @@
       <div class="box">
         <h1>Tasks</h1>
       </div>
-
       <div class="main">
-        <div class="addedtasks">
-          <h2>Current Tasks</h2>
-          <hr>
-          <button id="createtask" onClick="load()">Uncompleted Tasks</button>
-          <ul id="taskincomplete">
-            <p id="demo"> </p>
-            <a id="demo"> </p>
-              <p id="demo"> </p>
-              <p id="demo"> </p>
-              <p id="demo"> </p>
-          </ul>
+        <div class="subtitle">
+          <div class="addedItem">
+            <h2>Current item</h2>
+            <hr>
+            <ul id="taskincomplete">
+              <li><input type="checkbox"><label>Go to the moon.</label><input type="text"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -174,16 +170,16 @@
                   }
               }
               for (let i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function () {
-                      this.classList.toggle("active");
-                      var content = this.nextElementSibling;
-                      if (content.style.display == "block") {
-                        content.style.display = "none";
-                      } else {
-                        content.style.display = "block";
-                      }
-                    });
+                coll[i].addEventListener("click", function () {
+                  this.classList.toggle("active");
+                  var content = this.nextElementSibling;
+                  if (content.style.display == "block") {
+                    content.style.display = "none";
+                  } else {
+                    content.style.display = "block";
                   }
+                });
+              }
             }
           </script>
         </section>
@@ -201,16 +197,21 @@
 
     <div class="main">
 
-      <table class="note-table">
-        <tr>
-          <td class="header">Title</td>
-          <td class="header">Note</td>
-        </tr>
-      </table>
-
-
-      <script src="notes.js"></script>
-    </body>
+      <div class="addedItem">
+        <h2>Today's Notes</h2>
+        <hr>
+        <ul id="taskincomplete">
+          <!-- <div class="content"> -->
+          <div>
+            <li><label id=title>Don't Forget</label><input type="text">
+              <p>"Don't forget flag for moon landing."</p>
+            </li>
+            <li><label id=title>Catch Phrase ideas</label><input type="text">
+              <p>"One small step for man. One giant leap for mankind."</p>
+            </li>
+          </div>
+        </ul>
+      </div>
     </div>
   </div>
   <!--notes card end-->
