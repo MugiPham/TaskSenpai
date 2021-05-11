@@ -265,7 +265,7 @@ li > .edit:hover {
 
 
 /* stuff for proj card */
-.collapsible {
+.projcollapsible {
     background-color: #777;
     color: white;
     cursor: pointer;
@@ -282,7 +282,7 @@ li > .edit:hover {
     background-color: #55bfe0;
   }
   
-  .content {
+  .projcontent {
     padding: 18px;
     display: none;
     overflow: hidden;
